@@ -8,13 +8,13 @@ int main()
 	
 	int a[15][15]={0}, i, s, j, kp, m, n;
 	
-	while(system("pause"),fflush(stdin),system("cls"),printf("Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹(m*n) : "),scanf("%i%i",&m,&n)!=2||n>15||n<=1||m>15||m<=1)
-	printf("ÐžÑˆÐ¸Ð±ÐºÐ°! Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´\n");
+	while(system("pause"),fflush(stdin),system("cls"),printf("ââåäèòå ðàçìåð ìàòðèöû(m*n) : "),scanf("%i%i",&m,&n)!=2||n>15||n<=1||m>15||m<=1)
+	printf("Îøèáêà! íåêîððåêòíûé ââîä\n");
 	
 	for(j=0;j<m;j++)
 		for (i=0;i<n;i++)
 			while(printf("a[%i][%i]= ",j,i),scanf("%i",&a[j][i])!=1||(a[j][i]!=1 && a[j][i]!=0))
-				printf("Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹ ÐµÑ‰Ðµ Ñ€Ð°Ð·\n");
+				printf("ââåäèòå çíà÷åíèå ýëåìåíòà ìàòðèöû åùå ðàç\n");
 	
 	printf("\n");
 	
@@ -55,7 +55,7 @@ int main()
 						printf(" %i ",a[j][i]);
 			}
 	
-	printf("ÐšÐ¾Ð»-Ð²Ð¾  Ð¿Ñ€ÑÐ¼-ÐºÐ¾Ð² : %i\n",kp);
+	printf("Êîë-âî  ïðÿì-êîâ : %i\n",kp);
 	
 	system("pause");
 	return 0;
