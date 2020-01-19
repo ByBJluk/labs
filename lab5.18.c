@@ -38,15 +38,14 @@ int main()
 				for(j1;a[j1][i]==1;j1++);
 				
 				for(i1;a[j][i1]==1;i1++);
-				j1++;
-				i1++;
-				
+
 				s=j1*i1;
 				
 				for(s;s>=0;s--)
-					if(a[s]==0)
+					if(a[0][s]==0)
 						break;
 				
+				s++;
 				j1++;
 				i1++;
 				
