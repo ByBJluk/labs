@@ -69,22 +69,18 @@ int main()
 					{
 					
 						printf("\n1");
-						printf("\nj1=%i\ni1=%i",s,j1,i1);
 						for(j1;j1>=j;j1--)
 							if(a[j1][i1+1]!=0)
 								break;
-						printf("\nj1=%i\ni1=%i",s,j1,i1);
 						j1=j;
 						for(j1;a[j1][i]==1;j1++);
-						printf("\nj1=%i\ni1=%i",s,j1,i1);
 						for(i1;i1>=i;i1--)
 							if(a[j1+1][i1]!=0)
 								break;
-						printf("\nj1=%i\ni1=%i",s,j1,i1);
+
 						if(i1==i-1)
 							j1=0;
 							i1=0;
-						printf("\nj1=%i\ni1=%i",s,j1,i1);
 					}
 					
 				if((i==0) && (j!=0))
