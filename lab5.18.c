@@ -26,31 +26,80 @@ int main()
 	
 	for(j=0;j<m;j++)
 		for (i=0;i<n;i++)
-			if(a[j][i]==1 && a[j-1][i]==0 && a[j][i-1]==0)
+			if(a[j][i]==1 &&(( a[j-1][i]==0 && a[j][i-1]==0 && a[j-1][i-1]==0)||(i==0 && a[j-1][i]==0)||(j==0 && a[j][i-1]==0)))
 			{
-				int kj, ki, i1, i2, j2 ,j1 , k1, i3, j3;
+				int kj, ki, i1, j1;
 				kj=0;
 				ki=0;
 				i1=i;
 				j1=j;
+				kp=0;
 				
-				for(j1;a[j1][i]==1;j1++);	
-					
+				for(j1;a[j1][i]==1;j1++);
+				
 				for(i1;a[j][i1]==1;i1++);
+				j1++;
+				i1++;
 				
 				s=j1*i1;
 				
-				for(j1;j1=>j;j1--)
-					for(i1;i1>=i;i1--)
-						if(a[j1[i1]==1)
-							k1++;
+				for(s;s>=0;s--)
+					if(a[s]==0)
+						break;
 				
-				if(k1==s)
+				j1++;
+				i1++;
+				
+				if(i==0 && j==0)
+					{
+						for(j1;j1>=0;j1--)
+							if(a[j1][i1+1]!=0)
+								break;
+						for(i1;i1>=0;i1--)
+							if(a[j1+1][i1]!=0)
+								break;
+					}
+					
+				if(i==0 && j!=0)
+					{
+						for(j1;j1>=0;j1--)
+							if(a[j1][i1+1]!=0)
+								break;
+					
+						for(i1;i1>=0;i1--)
+							{
+								if(a[j-1][i1]!=0)
+									break;
+								if(a[j1+1][i1]!=0)
+									break;
+							}
+					}
+					
+				if(j==0 && i!=0)
+					{
+						
+						for(j1;j1>=0;j1--)
+							{
+								if(a[j1][i-1]!=0)
+									break;
+								if(a[j1][i1+1]!=0)
+									break;
+							}
+					
+						for(i1;i1>=0;i1--)
+							{
+								if(a[j-1][i1]!=0)
+									break;
+								if(a[j1+1][i1]!=0)
+									break;
+							}
+					}
+					
+					i1++;
+					j1++;
+					
+				if(s==0 && i1==0 && j1==0)
 					kp++;
-				
-				for(j=0;j<m;printf("\n"),j++)
-					for (i=0;i<n;i++)
-						printf(" %i ",a[j][i]);
 			}
 	
 	printf("Кол-во  прям-ков : %i\n",kp);
